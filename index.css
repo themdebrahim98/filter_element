@@ -188,8 +188,8 @@ p {
 
   display: none;
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9);
+ 
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .modal .modal-content{

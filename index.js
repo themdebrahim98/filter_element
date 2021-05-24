@@ -96,7 +96,8 @@ for (let i = 0; i < filter_col_contents.length; i++) {
 
 	current_filter_content.onclick = function (e) {
 
-		let slide_index = i;
+		slide_index = i;
+		const img_elm = current_filter_content.getElementsByTagName("img")[0];
 		console.log(slide_index);
 
 		changeItem();
@@ -143,6 +144,7 @@ for (let i = 0; i < filter_col_contents.length; i++) {
 	function changeItem() {
 		const img_elm = filter_col_contents[slide_index].getElementsByTagName("img")[0];
 		modal_img.src = img_elm.src;
+		console.log(img_elm);
 		caption_text.innerHTML = filter_col_contents[slide_index].querySelector("h2").innerHTML;
 		caption_counter.innerHTML = (slide_index + 1) + "  of  " + filter_col_contents.length;
 
@@ -173,7 +175,7 @@ for (let i = 0; i < filter_btn_containers.length; i++) {
 		var current = document.querySelector(".active");
 
 		current.className = current.className.replace(" active", "");
-		this.className += " active ";
+		this.className += " active";
 
 
 	});
